@@ -6,3 +6,5 @@
 ```
 $ npm install
 ```
+
+> Once all packages are installed start the json server and the run the app by running the start script.
