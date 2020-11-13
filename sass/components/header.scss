@@ -1,0 +1,91 @@
+.header {
+  background: #dc143c;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.headerOptions {
+  display: flex;
+}
+.logo {
+  position: absolute;
+  right: 0;
+  flex-grow: 1;
+  padding-top: 8px;
+}
+.logo img {
+  width: 50px;
+}
+.bars {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2rem;
+}
+.fa {
+  color: white;
+}
+.options {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: crimson;
+  border-top: 1px solid black;
+}
+.options:hover,
+.options:active {
+  background: #ececec;
+}
+
+.options a {
+  text-decoration: none;
+  color: inherit;
+}
+.options span {
+  color: black;
+  margin-right: 10px;
+}
+.sideNavMain {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: crimson;
+  height: 30%;
+  font-size: 2rem;
+}
+.navItems {
+  display: none;
+}
+// @include respond(tab-port) {
+//   .bars {
+//     display: none;
+//   }
+// }
+@media (min-width: 56.25em) {
+  .navItems {
+    display: inline-block;
+    padding: 1rem 0.5rem 0 0.5rem;
+    color: white;
+    font-size: 1.3rem;
+  }
+  .navItems a {
+    text-decoration: none;
+    color: white;
+  }
+  .navItems a:hover {
+    color: black;
+    background-color: white;
+  }
+  .navItems span {
+    display: none;
+  }
+  .header {
+    height: 3rem;
+  }
+  .bars {
+    display: none;
+  }
+  .logo {
+    top: 5px;
+  }
+}

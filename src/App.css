@@ -1,38 +1,287 @@
-.App {
+.header {
+  background: #dc143c;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+
+.headerOptions {
+  display: flex; }
+
+.logo {
+  position: absolute;
+  right: 0;
+  flex-grow: 1;
+  padding-top: 8px; }
+
+.logo img {
+  width: 50px; }
+
+.bars {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2rem; }
+
+.fa {
+  color: white; }
+
+.options {
   text-align: center;
-}
+  padding: 0.5rem 0;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: crimson;
+  border-top: 1px solid black; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.options:hover,
+.options:active {
+  background: #ececec; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.options a {
+  text-decoration: none;
+  color: inherit; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.options span {
+  color: black;
+  margin-right: 10px; }
+
+.sideNavMain {
+  justify-content: center;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  background: crimson;
+  height: 30%;
+  font-size: 2rem; }
+
+.navItems {
+  display: none; }
+
+@media (min-width: 56.25em) {
+  .navItems {
+    display: inline-block;
+    padding: 1rem 0.5rem 0 0.5rem;
+    color: white;
+    font-size: 1.3rem; }
+  .navItems a {
+    text-decoration: none;
+    color: white; }
+  .navItems a:hover {
+    color: black;
+    background-color: white; }
+  .navItems span {
+    display: none; }
+  .header {
+    height: 3rem; }
+  .bars {
+    display: none; }
+  .logo {
+    top: 5px; } }
+
+.footer {
+  margin-top: 2rem;
+  background: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  height: fit-content; }
+
+.logo img {
+  height: 30px; }
+
+.team {
+  float: left;
+  color: white;
+  margin-left: 10px;
+  background-color: #13cb6c; }
+
+.date {
+  color: black;
+  float: right; }
+
+.newslistItem {
+  border-bottom: 1px solid grey;
+  background-color: white; }
+
+.newslistItem:hover {
+  background-color: rgba(112, 227, 168, 0.7);
+  color: white; }
+
+.newslistItem h2 {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 400;
+  margin: 0;
+  padding: 0.5rem;
+  display: inline-block; }
+
+.newslistItem h2:hover {
+  color: white; }
+
+.newslistItem a {
+  text-decoration: none; }
+
+.loadmore {
+  margin-top: 1rem;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.6rem;
+  background: crimson;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-}
+  cursor: pointer; }
 
-.App-link {
-  color: #61dafb;
-}
+.newsListWrapper {
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(-80%);
+  transition: all 0.5s ease-in; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.newsListWrapper_enter {
+  opacity: 1;
+  transform: translateX(0%); }
+
+.fa {
+  color: black; }
+
+@media (min-width: 56.25em) {
+  .list {
+    width: 50%;
+    height: 70vh;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    z-index: 10; } }
+
+.item {
+  position: relative; }
+
+.item a {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-decoration: none;
+  right: 0; }
+
+.image {
+  height: 300px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important; }
+
+.caption {
+  color: white;
+  padding: 2rem;
+  font-size: 1.6rem; }
+
+.caption:hover {
+  color: crimson; }
+
+@media (min-width: 56.25em) {
+  .image {
+    height: 100vh;
+    width: 50%;
+    background-size: cover !important;
+    float: left; } }
+
+.videolist h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0; }
+
+.loadmore {
+  margin-top: 1rem;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.6rem;
+  background: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer; }
+
+.wrapper {
+  display: flex;
+  border-bottom: 2px solid black;
+  background-color: white; }
+
+.wrapper:hover {
+  background-color: rgba(112, 227, 168, 0.7);
+  color: white; }
+
+.wrapper h2 {
+  font-size: 1rem;
+  color: #535353; }
+
+.left {
+  background-size: cover !important; }
+
+.left div {
+  height: 90px;
+  width: 90px;
+  background-size: 40px !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important; }
+
+.right {
+  flex-grow: 1;
+  padding: 10px; }
+
+.videolist-wrapper {
+  width: 98%;
+  margin: auto;
+  box-shadow: 1px 1.5px 2px 1.5px black;
+  position: relative; }
+
+.teamInfo {
+  width: 98%;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 1px 1.5px 2px 1.5px black; }
+  .teamInfo-logo {
+    background-size: cover !important;
+    height: 60px;
+    border-radius: 50%;
+    width: 60px; }
+  .teamInfo-teamname {
+    top: 0;
+    position: absolute;
+    right: 20px;
+    text-align: right; }
+    .teamInfo-teamname p {
+      text-transform: capitalize;
+      color: crimson; }
+      .teamInfo-teamname p span {
+        text-transform: uppercase;
+        font-size: 1rem; }
+  .teamInfo-wins {
+    font-size: 1.8rem;
+    margin: 0;
+    position: absolute;
+    left: 35%;
+    top: 50%; }
+  .teamInfo-author {
+    float: right;
+    font-weight: 100; }
+  .teamInfo-date {
+    font-weight: 100; }
+
+.article {
+  margin: auto;
+  width: 98%;
+  box-shadow: 1px 1.5px 2px 1.5px black; }
+  .article-header {
+    color: crimson; }
+  .article-image {
+    margin: 2rem auto;
+    width: 90%;
+    height: 40vh;
+    background-size: cover !important; }
+  .article-paragraph {
+    width: 90%;
+    margin: auto;
+    color: gray;
+    font-size: 1.4rem; }

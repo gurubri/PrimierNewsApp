@@ -1,0 +1,61 @@
+.teamInfo {
+  width: 98%;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+  box-shadow: 1px 1.5px 2px 1.5px black;
+  &-logo {
+    background-size: cover !important;
+    height: 60px;
+    border-radius: 50%;
+    width: 60px;
+  }
+  &-teamname {
+    top: 0;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    p {
+      text-transform: capitalize;
+      color: crimson;
+      span {
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+    }
+  }
+  &-wins {
+    font-size: 1.8rem;
+    margin: 0;
+    position: absolute;
+    left: 35%;
+    top: 50%;
+  }
+  &-author {
+    float: right;
+    font-weight: 100;
+  }
+  &-date {
+    font-weight: 100;
+  }
+}
+.article {
+  margin: auto;
+  width: 98%;
+  box-shadow: 1px 1.5px 2px 1.5px black;
+  &-header {
+    color: crimson;
+  }
+  &-image {
+    margin: 2rem auto;
+    width: 90%;
+    height: 40vh;
+    background-size: cover !important;
+  }
+  &-paragraph {
+    width: 90%;
+    margin: auto;
+    color: gray;
+    font-size: 1.4rem;
+  }
+}
